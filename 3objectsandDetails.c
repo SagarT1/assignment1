@@ -1,11 +1,3 @@
-/******************************************************************************
-
-                            Online C Compiler.
-                Code, Compile, Run and Debug C program online.
-Write your code in this editor and press "Run" button to compile and execute it.
-
-*******************************************************************************/
-
 #include <stdio.h>
 #include<stdlib.h>
 
@@ -17,53 +9,62 @@ struct student
     
     
 };
+typedef struct student stu;
 
-struct student stu1,stu2,stu3;
+//struct student stu1;//stu2,stu3;
+
 int main()
 {
+stu *p,*q,*r;
+p =(stu*)malloc(sizeof(stu)*3);
+q =(stu*)malloc(sizeof(stu)*3);
+r =(stu*)malloc(sizeof(stu)*3);
     
     printf("enter the details ");
     for(int i=0; i<1; i++)
     {
         printf("enter the name of %d student: \n",i+1);
-        scanf("%s",stu1.name);
+        scanf("%s",p->name);
         printf("enter the roll no: \n");
-        scanf("%d",&stu1.rollno);
+        scanf("%d",&p->rollno);
         printf("enter the age: \n");
-        scanf("%d", &stu1.age);
+        scanf("%d", &p->age);
         
-        printf("\nenter the name of %d student: \n",i+2);
-        scanf("%s",stu2.name);
+        printf("enter the name of %d student: \n",i+1);
+        scanf("%s",q->name);
         printf("enter the roll no: \n");
-        scanf("%d",&stu2.rollno);
+        scanf("%d",&q->rollno);
         printf("enter the age: \n");
-        scanf("%d", &stu2.age);
+        scanf("%d", &q->age);
         
-        printf("\nenter the name of %d student: \n",i+3);
-        scanf("%s",stu3.name);
+        printf("enter the name of %d student: \n",i+1);
+        scanf("%s",r->name);
         printf("enter the roll no: \n");
-        scanf("%d",&stu3.rollno);
+        scanf("%d",&r->rollno);
         printf("enter the age: \n");
-        scanf("%d", &stu3.age);
+        scanf("%d", &r->age);
+    
         
     }
 printf("\n");
     for(int i=0; i<1; i++)
     {
         printf("details of %d student: \n",i+1);
-        printf("name of the student: %s\n",stu1.name);
-        printf("roll no: %d\n",stu1.rollno);
-        printf(" age: %d\n" ,stu1.age);
+        printf("name of the student: %s\n",p->name);
+        printf("roll no: %d\n",p->rollno);
+        printf(" age: %d\n" ,p->age);
         
         printf("details of %d student: \n",i+1);
-        printf("name of the student: %s\n",stu2.name);
-        printf("roll no: %d\n",stu2.rollno);
-        printf(" age: %d\n", stu2.age);
+        printf("name of the student: %s\n",q->name);
+        printf("roll no: %d\n",q->rollno);
+        printf(" age: %d\n" ,q->age);
         
         printf("details of %d student: \n",i+1);
-        printf("name of the student: %s\n",stu3.name);
-        printf("roll no: %d\n",stu3.rollno);
-        printf(" age: %d\n", stu3.age);
+        printf("name of the student: %s\n",r->name);
+        printf("roll no: %d\n",r->rollno);
+        printf(" age: %d\n" ,r->age);
+        
+      
         
     }
     
